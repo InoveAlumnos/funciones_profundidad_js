@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100vw;
+  /*background-color: #353b40;*/
+  background-image: radial-gradient(
+    circle,
+    #3a3b38,
+    #2f3230,
+    #262928,
+    #1e2020,
+    #161718
+  );
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header p {
+  color:#BF4040;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  padding-top: 50px;
+  min-height: 100vh;
+}
+
+button {
+  height: 30px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+article {
+  background:#404d56;
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
+  border: 2px solid rgba(0, 180, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgba(0, 180, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article:hover {
+  box-shadow: 0 2px 2px rgba(0, 255, 0, 0.3);
+  animation: bounce 0.5s linear;
+}
+
+article p{
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: bold;
+  color: #222224;
+}
+
+article img {
+  width: 80%;
+  height: auto;
+}
+
+/* Color de fondo según tipo */
+.normal {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(168, 167, 122, 1) 100%
+  );
+}
+.agua {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(99, 144, 240, 1) 100%
+  );
+}
+.fuego {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(238, 129, 48, 1) 100%
+  );
+}
+.electricidad {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(247, 208, 44, 1) 100%
+  );
+}
+.planta {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(122, 199, 76, 1) 100%
+  );
+}
+.veneno {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(104, 40, 90) 100%
+  );
+}
+.desconocido {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    var(--poke-section-black) 100%
+  );
+}
+.par {
+  background:#404d56;
+}
+.impar {
+  background:#5c7688;
+}
+
+/* Animación de bounce */
+@keyframes bounce {
+	20% {
+			transform: translateY(-6px);
+	}
+	40% {
+			transform: translateY(0px);
+	}
+
+	80% {
+			transform: translateY(-2px);
+	}
+	100% {
+			transform: translateY(0);
+	}
+}
