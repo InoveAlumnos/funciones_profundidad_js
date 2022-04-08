@@ -1,6 +1,6 @@
 "use strict";
 
-console.log(`"this" a nivel script: ${this}`)
+console.log(`"this" a nivel script: ${this}`);
 
 function funcionContenedora() {
 

@@ -1,6 +1,6 @@
 "use strict";
 
-console.log(`"this" a nivel script: ${this}`)
+console.log(`"this" a nivel script: ${this}`);
 
 let numero = 5;
 console.log(`El valor de numero a nivel global: ${numero}`);
