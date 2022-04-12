@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,900");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Establecemos las variables globales:  */
+:root {
+  --main-bg-color: rgb(12, 12, 32);
+  --bg-color-yellow: #ffcc00;
+  --bg-color-yellow-trasparent: #ffcc0010;
+  --bg-color-l-blue:#0074bd;
+  --bg-color-blue-1:#043570;
+  --bg-color-blue-2:#0f55aa;
+  --bg-color-l-gray:#f2f2f2;
+}
+
+button:focus {
+  outline: 0;
+  outline: none;
+}
+body {
+  font-family: Roboto, sans-serif;
+  background: no-repeat center url(https://i.pinimg.com/originals/f7/e9/76/f7e976db09466a9f58d4718eea2511b7.jpg);
+  background-size: 100% 109%;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: justify;
+  color: black;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header p {
+  color: #ffcc00;
+  text-align: center;
+  font-size: 32px;
+}
+
+.puntajeBajo {
+  color: #e74444;
+}
+
+footer {
+  width: 100%;
+  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-logo {
+  filter: drop-shadow(15px 15px 10px rgb(71, 82, 8));
+  width: 350px;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 20px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article {
+  width: 400px;
+  height: 620px;
+  padding: 15px;
+  border: 10px solid var(--bg-color-l-blue);
+  border-radius: 15px;
+  box-shadow: -5px 5px 0px 5px var(--bg-color-blue-1),inset -3px 3px 0px 3px rgba(0,0,0,0.25);
+}
+
+#trivia {
+  background: var(--bg-color-yellow);
+}
+
+#skills {
+  border: 10px solid var(--bg-color-l-blue);
+}
+
+/* Trivia section */
+.tittle{
+  width: 80%;
+  margin-bottom: 5px;
+  font-size: 21px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: left;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+}
+
+#reload {
+  width: 25px;
+  height: 25px;
+  font-size: 25px;
+  margin-top: -3.5px;
+  border: none;
+  float: right;
+  transition: 100ms;
+  background: transparent;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+}
+
+#reload:hover {
+  color:var(--bg-color-l-blue);
+}
+
+#reload:active {
+  transform: rotate(90deg);
+  color:var(--bg-color-yellow);
+  text-shadow: none;
+}
+
+.block {
+  width: 100%;
+  height: 215px;
+  background: url(https://i.imgur.com/FbIpTsq.png);
+  background-size:cover;
+  border: 5px solid var(--bg-color-l-blue);
+  box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.71), inset 1px 1px 7px 3px rgba(0,0,0,0.35);;
+}
+
+.block img {
+  margin: 10px;
+  width: 190px;
+  height: 190px;
+  filter: contrast(0%);
+}
+
+.block .success {
+  filter: none!important;
+}
+
+/*.block .done {
+  filter: none!important;
+}*/
+
+header span {
+  width: 100%;
+  margin: 10px auto 5px;
+  font-size: 22px;
+  display: block;
+  text-transform:uppercase;
+  color: var(--bg-color-l-gray);
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 var(--bg-color-l-blue), 2px -2px 0 var(--bg-color-l-blue), -2px 2px 0 var(--bg-color-l-blue), -2px -2px 0 var(--bg-color-l-blue), 2px 0px 0 var(--bg-color-l-blue), 0px 2px 0 var(--bg-color-l-blue), -2px 0px 0 var(--bg-color-l-blue), 0px -2px 0 var(--bg-color-l-blue);
+}
+
+.description {
+  margin: 0 0 7px;
+}
+
+input {
+  width: 100%;
+  height: 45px;
+  font-size:18px;
+  border: 3px solid var(--bg-color-l-blue);
+  color: var(--bg-color-l-blue);
+  padding: 0 15px;
+  background: var(--bg-color-l-gray);
+  outline: none;
+
+}
+
+::-webkit-input-placeholder {
+  color: #c4c4c4;
+}
+
+#send {
+  width: 70%;
+  height: 50px;
+  border: 5px solid  var(--bg-color-l-blue);
+  color: var(--bg-color-l-blue);
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: transparent;
+  margin: 10px 52.5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+#send:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0;
+  height: 100%;
+  background: var(--bg-color-l-blue);
+  z-index: -1;
+  -webkit-transition: width 200ms ease-out;
+  transition: width 200ms ease-out;
+}
+
+#send:hover {
+  color: white;
+}
+
+#send:hover:after {
+  width: 110%;
+}
+
+#send:active:after {
+  background-color: var(--bg-color-blue-2);
+}
+
+.mark {
+  width: 374px;
+  height: 100px;
+  opacity: 0.25;
+  margin: 0 -15px;
+  background: url(https://i.imgur.com/QhAGTON.png);
+  background-position: 50% 0;
+}
+
+/* Skills section */
+#skills h1{
+  color: var(--bg-color-yellow)
+}
+
+.poke-card {
+  position: relative;
+  height: fit-content;
+  border-radius: 4px;
+  text-align: center;
+  margin: 0 auto;
+  text-transform:uppercase;
+  font-size: 40px;
+  color: var(--bg-color-l-gray);
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 var(--bg-color-l-blue), 2px -2px 0 var(--bg-color-l-blue), -2px 2px 0 var(--bg-color-l-blue), -2px -2px 0 var(--bg-color-l-blue), 2px 0px 0 var(--bg-color-l-blue), 0px 2px 0 var(--bg-color-l-blue), -2px 0px 0 var(--bg-color-l-blue), 0px -2px 0 var(--bg-color-l-blue);
+}
+
+.poke-card::before {
+  content: '';
+  background-size: 3px 3px;
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+  
+}
+
+.poke-stats div {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  padding: 5px;
+  font-size: 18px;
+  text-transform:uppercase;
+  color: var(--bg-color-l-gray);
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 var(--bg-color-l-blue), 2px -2px 0 var(--bg-color-l-blue), -2px 2px 0 var(--bg-color-l-blue), -2px -2px 0 var(--bg-color-l-blue), 2px 0px 0 var(--bg-color-l-blue), 0px 2px 0 var(--bg-color-l-blue), -2px 0px 0 var(--bg-color-l-blue), 0px -2px 0 var(--bg-color-l-blue);
+}
+
+.poke-types div {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 4px;
+  text-transform:uppercase;
+  color: var(--bg-color-l-gray);
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: none;
+}
+
+.poke-img {
+  width: 400px;
+  border-radius: 50%;
+}
+
+/* Animaciones */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Poké Styles */
+.pokeball {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border: 5px solid #000;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: inset -10px 10px 0 10px #ccc;
+  animation: fall .25s ease-in-out,
+             shake 1.25s cubic-bezier(.36,.07,.19,.97) 3;
+}
+.pokeball::before,
+.pokeball::after {
+  content:"";
+  position: absolute;
+}
+
+.pokeball::before {
+  background: red;
+  width: 100%;
+  height: 100%;
+}
+.pokeball::after {
+  top: calc(50% - 5px);
+  left: calc(50% - 42px);
+  transform: rotate(90deg);
+  width: 100%;
+  height: 10px;
+  background: #000;
+}
+.pokeball__button {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  background: #7f8c8d;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 0 5px black;
+  animation: blink .5s alternate 7;
+}
+/* Animation */
+@keyframes blink {
+  from { background: #eee;}
+  to { background: #e74c3c; }
+}
+@keyframes shake {
+  0% { transform: translate(0, 0) rotate(0); }
+  20% { transform: translate(-10px, 0) rotate(-20deg); }
+  30% { transform: translate(10px, 0) rotate(20deg); }
+  50% { transform: translate(-10px, 0) rotate(-10deg); }
+  60% { transform: translate(10px, 0) rotate(10deg); }
+  100% { transform: translate(0, 0) rotate(0); }
+}
+@keyframes fall {
+  0% { top: -200px }
+  60% { top: 0 }
+  80% { top: -20px }
+  100% { top: 0 }
+}

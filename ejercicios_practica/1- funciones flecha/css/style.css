@@ -1,0 +1,17 @@
+
+button {
+    width: 200px;
+    height: 100px;
+}
+
+.btnClick {
+    background-color: green;
+}
+
+.btnOver {
+    background-color: blue;
+}
+
+.btnOut {
+    background-color: gray;
+}

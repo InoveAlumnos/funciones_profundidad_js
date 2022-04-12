@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-wrap: wrap;
+  }
+  
+  .main-title {
+    padding: 10px;
+    width: 100%;
+    box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.039),
+      6.7px 6.7px 5.3px rgba(0, 0, 0, 0.057),
+      12.5px 12.5px 10px rgba(0, 0, 0, 0.07),
+      22.3px 22.3px 17.9px rgba(0, 0, 0, 0.083),
+      41.8px 41.8px 33.4px rgba(0, 0, 0, 0.101),
+      100px 100px 80px rgba(0, 0, 0, 0.14);
+  }
+  
+  .post {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.039),
+      6.7px 6.7px 5.3px rgba(0, 0, 0, 0.057),
+      12.5px 12.5px 10px rgba(0, 0, 0, 0.07),
+      22.3px 22.3px 17.9px rgba(0, 0, 0, 0.083),
+      41.8px 41.8px 33.4px rgba(0, 0, 0, 0.101),
+      100px 100px 80px rgba(0, 0, 0, 0.14);
+    max-width: 350px;
+    padding: 20px;
+  }
+  
+  .post-header {
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .post-header > span {
+    border: 2px solid rgb(70, 122, 70);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.039),
+      6.7px 6.7px 5.3px rgba(0, 0, 0, 0.057),
+      12.5px 12.5px 10px rgba(0, 0, 0, 0.07),
+      22.3px 22.3px 17.9px rgba(0, 0, 0, 0.083),
+      41.8px 41.8px 33.4px rgba(0, 0, 0, 0.101),
+      100px 100px 80px rgba(0, 0, 0, 0.14);
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .icon-avatar {
+    border: 2px solid gray;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: bottom;
+    overflow: hidden;
+  }
+  
+  .open div:nth-child(2) {
+    opacity: 1;
+    height: 250px;
+    transition: all 1s ease-out;
+  }
+  
+  .closed div:nth-child(2) {
+    opacity: 0;
+    height: 0px;
+    transition: all 0.5s ease-out;
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .post {
+      max-width: 40%;
+    }
+  }
